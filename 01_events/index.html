@@ -13,7 +13,7 @@
     <li><img src="img/org.gif" alt="orange"></li>
     <li><img src="img/ppl.gif" alt="purple"></li>
     <li><img src="img/blu.gif" alt="blue"></li>
-    <li><img src="img/pnk.gif" alt="pink"></li>
+    <li><img src="img/pnk.gif" alt="pink" id="pink"></li>
     <li><img src="img/grn.gif" alt="green"></li>
     <li><img src="img/ygr.gif" alt="ygreen"></li>
     <li><img src="img/gry.gif" alt="gray"></li>
@@ -21,8 +21,12 @@
   </ul>
   <script type="text/javascript">
   document.getElementById('grid').addEventListener('click', function(e) {
-    console.log(e.toElement.alt);
+    console.log("ul click");
   }, false);
+
+  document.getElementById('pink').addEventListener('click', function(e) {
+    console.log(e.toElement.alt);
+  }, true);
   </script>
 </body>
 </html>
