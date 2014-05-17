@@ -9,24 +9,26 @@
 </head>
 <body>
   <ul id="grid">
-    <li><img src="img/ylw.gif" alt="yellow"></li>
-    <li><img src="img/org.gif" alt="orange"></li>
-    <li><img src="img/ppl.gif" alt="purple"></li>
-    <li><img src="img/blu.gif" alt="blue"></li>
-    <li><img src="img/pnk.gif" alt="pink" id="pink"></li>
-    <li><img src="img/grn.gif" alt="green"></li>
-    <li><img src="img/ygr.gif" alt="ygreen"></li>
-    <li><img src="img/gry.gif" alt="gray"></li>
-    <li><img src="img/red.gif" alt="red"></li>
+    <li><a href="http://google.com"><img src="img/ylw.gif" alt="yellow"></a></li>
+    <li><a href="http://google.com"><img src="img/org.gif" alt="orange"></a></li>
+    <li><a href="http://google.com"><img src="img/ppl.gif" alt="purple"></a></li>
+    <li><a href="http://google.com"><img src="img/blu.gif" alt="blue"></a></li>
+    <li><a href="http://google.com"><img src="img/pnk.gif" alt="pink" id="pink"></a></li>
+    <li><a href="http://google.com"><img src="img/grn.gif" alt="green"></a></li>
+    <li><a href="http://google.com"><img src="img/ygr.gif" alt="ygreen"></a></li>
+    <li><a href="http://google.com"><img src="img/gry.gif" alt="gray"></a></li>
+    <li><a href="http://google.com"><img src="img/red.gif" alt="red"></a></li>
   </ul>
   <script type="text/javascript">
   document.getElementById('grid').addEventListener('click', function(e) {
     console.log("ul click");
+    e.preventDefault();
   }, false);
 
   document.getElementById('pink').addEventListener('click', function(e) {
     console.log(e.toElement.alt);
     e.stopPropagation();
+    e.preventDefault();
   }, false);
   </script>
 </body>
