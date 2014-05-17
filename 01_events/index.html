@@ -8,25 +8,20 @@
   <script src="js/main.js"></script>
 </head>
 <body>
-  <ul>
-    <li><img src="img/ylw.gif" alt="yellow" onclick="alert('Yellow')"></li>
-    <li><img src="img/org.gif" alt="orange" id="orange"></li>
-    <li><img src="img/ppl.gif" alt="purple" id="purple"></li>
-    <li><img src="img/blu.gif" alt="blue" id="blue"></li>
-    <li><img src="img/pnk.gif" alt="pink" id="pink"></li>
+  <ul id="grid">
+    <li><img src="img/ylw.gif" alt="yellow"></li>
+    <li><img src="img/org.gif" alt="orange"></li>
+    <li><img src="img/ppl.gif" alt="purple"></li>
+    <li><img src="img/blu.gif" alt="blue"></li>
+    <li><img src="img/pnk.gif" alt="pink"></li>
     <li><img src="img/grn.gif" alt="green"></li>
     <li><img src="img/ygr.gif" alt="ygreen"></li>
     <li><img src="img/gry.gif" alt="gray"></li>
     <li><img src="img/red.gif" alt="red"></li>
   </ul>
   <script type="text/javascript">
-  document.getElementById('orange').onclick = function() {
-    alert("Orange");
-  }
-  document.getElementById('purple').addEventListener('click', function() { alert('Purple'); }, false);
-
-  document.getElementById('blue').addEventListener('click', function(e) {
-    console.log(e);
+  document.getElementById('grid').addEventListener('click', function(e) {
+    console.log(e.toElement.alt);
   }, false);
   </script>
 </body>
