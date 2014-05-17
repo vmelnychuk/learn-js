@@ -26,7 +26,8 @@
 
   document.getElementById('pink').addEventListener('click', function(e) {
     console.log(e.toElement.alt);
-  }, true);
+    e.stopPropagation();
+  }, false);
   </script>
 </body>
 </html>
