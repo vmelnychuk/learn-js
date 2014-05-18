@@ -1,0 +1,44 @@
+Ways to Event Registration:
+  * tag attributes
+    <a onclick="alert('Hello'); return false;"></a>
+    <!-- return false; used for prevent default -->
+  * using dot notation
+    getElementById('my-element').onclick = function() { alert('Hello') };
+  * addEventListener() // multiple events by single call, event propagation, non-DOM elements events
+    getElementById('elementId').addEventListener('ev-name', callback, false);
+    function callback(evObject) { }
+
+Event Propagation:
+  * capture child events
+  * catching events // set by last boolean param of addEventListener, order of cap and bubbling
+    - capturing phase
+      from top elem to deeper
+    - bubbling phase
+      from deeper to top
+  * order
+    - false: bubbling fist, cappturing second
+    - true: bubbling sesong, cappturing first
+  * stop propagation:
+    - e.stopPropagation();
+  * prevent default action // for form validation and processing and alse for links
+    - preventDefault()
+
+Select Element
+  * document.querySelector()
+View object
+  * console.dir(objName)
+Get Parent node
+  * el.parentNode
+Remove child node
+  * el.removeChild(objRef);
+Remove parent node
+  * removeTarget.parentNode.removeChild(removeTarget);
+Get several nodes in nodeList
+  * document.querySelectorAll('li').length
+Create DOM Element
+  * document.createElement('div')
+Set css class to element
+  * el.className = 'elClass';
+Add element
+  * el.appendChild(childEl);
+  S
